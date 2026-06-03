@@ -13,19 +13,22 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Thomas Brown home">
-        <span>Thomas Brown</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#book">Book</a>
-        <a href="#author">Author</a>
-        <a href="#video">Trailer</a>
-        <a href="#details">Details</a>
-      </nav>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Thomas Brown home">
+          <span>Thomas Brown</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#book">Book</a>
+          <a href="#author">Author</a>
+          <a href="#video">Trailer</a>
+          <a href="#details">Details</a>
+        </nav>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="kicker">Thomas Brown</p>
           <h1 id="hero-title">She Taught Me To Laugh Again</h1>
@@ -37,7 +40,10 @@
           </div>
         </div>
         <figure class="hero-cover">
-          <img src="assets/book-cover.jpg" alt="Book cover of She Taught Me To Laugh Again by Thomas Brown">
+          <div class="cover-card">
+            <span class="cover-label">Featured Book</span>
+            <img src="assets/book-cover.jpg" alt="Book cover of She Taught Me To Laugh Again by Thomas Brown">
+          </div>
           <figcaption>The sequel to <cite>Men Bleed Too</cite></figcaption>
         </figure>
       </section>
@@ -53,25 +59,35 @@
       </section>
 
       <section id="book" class="section about-book" aria-labelledby="book-title">
-        <div class="section-heading">
-          <p class="kicker">About the Book</p>
-          <h2 id="book-title">A love story born after loss</h2>
-        </div>
-        <div class="book-copy">
-          <p><cite>She Taught Me To Laugh Again</cite> is the sequel to Thomas Brown's debut book, <cite>Men Bleed Too</cite>. After his wife died from breast cancer, Tom returned to Carlisle, Pennsylvania to resume his duties as a colonel in the U.S. Army at Carlisle Barracks. The days were lonely and sad as he worked through the grieving process.</p>
-          <p>He decided to return to his last assignment at Fort Leavenworth, Kansas, to be closer to family and friends. Just a week before he was reassigned, he met Connie Noll, a recent widow. Their friendship became a relationship, and after Tom left Pennsylvania, they continued talking over the phone while making plans for a future reunion.</p>
-          <p>The book follows two people in their middle forties who had both lost spouses to death. It traces the trials of grieving, falling in love, managing distance, and trying to build a new life together. The story reaches its capstone with their wedding on September 30, 1995.</p>
+        <div class="about-layout">
+          <div class="section-heading">
+            <p class="kicker">About the Book</p>
+            <h2 id="book-title">A love story born after loss</h2>
+          </div>
+          <div class="book-copy">
+            <p><cite>She Taught Me To Laugh Again</cite> is the sequel to Thomas Brown's debut book, <cite>Men Bleed Too</cite>. After his wife died from breast cancer, Tom returned to Carlisle, Pennsylvania to resume his duties as a colonel in the U.S. Army at Carlisle Barracks. The days were lonely and sad as he worked through the grieving process.</p>
+            <p>He decided to return to his last assignment at Fort Leavenworth, Kansas, to be closer to family and friends. Just a week before he was reassigned, he met Connie Noll, a recent widow. Their friendship became a relationship, and after Tom left Pennsylvania, they continued talking over the phone while making plans for a future reunion.</p>
+            <p>The book follows two people in their middle forties who had both lost spouses to death. It traces the trials of grieving, falling in love, managing distance, and trying to build a new life together. The story reaches its capstone with their wedding on September 30, 1995.</p>
+          </div>
+          <aside class="about-note" aria-label="Story details">
+            <span>Set across Carlisle, Pennsylvania and Fort Leavenworth, Kansas</span>
+            <strong>September 30, 1995</strong>
+            <span>The wedding that becomes the story's capstone.</span>
+          </aside>
         </div>
       </section>
 
       <section class="quote-section" aria-labelledby="quote-title">
-        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-        <h2 id="quote-title">It is a moving story of two people daring to fall in love again.</h2>
+        <div class="quote-panel">
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <h2 id="quote-title">It is a moving story of two people daring to fall in love again.</h2>
+        </div>
       </section>
 
       <section id="author" class="section author-section" aria-labelledby="author-title">
         <div class="author-photo-wrap">
           <img src="assets/author-photo.jpg" alt="Thomas Brown author photograph">
+          <span>Retired U.S. Army Colonel</span>
         </div>
         <div class="author-copy">
           <p class="kicker">The Author</p>
@@ -86,7 +102,7 @@
           <h2 id="details-title">A biography of grief, devotion, and renewal</h2>
         </div>
         <div class="details-layout">
-          <dl class="details-list">
+          <dl class="details-list details-grid">
             <div>
               <dt>Genre</dt>
               <dd>Biography / Memoir</dd>
@@ -126,19 +142,26 @@
       </section>
 
       <section id="video" class="section video-section" aria-labelledby="video-title">
-        <div class="section-heading">
-          <p class="kicker">Trailer</p>
-          <h2 id="video-title">Watch the book trailer</h2>
+        <div class="video-layout">
+          <div class="section-heading">
+            <p class="kicker">Trailer</p>
+            <h2 id="video-title">Watch the book trailer</h2>
+            <p>See the emotional story behind Thomas Brown's sequel to <cite>Men Bleed Too</cite>.</p>
+            <p class="video-fallback"><a href="https://www.youtube.com/watch?v=HhCtMgyuWvw" target="_blank" rel="noopener noreferrer">Watch trailer on YouTube</a></p>
+          </div>
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/HhCtMgyuWvw" title="She Taught Me To Laugh Again trailer" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="video-embed-fallback" aria-label="YouTube trailer fallback">
+              <span>If the embedded player is unavailable, the trailer can still be viewed on YouTube.</span>
+              <a href="https://www.youtube.com/watch?v=HhCtMgyuWvw" target="_blank" rel="noopener noreferrer">Watch trailer on YouTube</a>
+            </div>
+          </div>
         </div>
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/HhCtMgyuWvw" title="She Taught Me To Laugh Again trailer" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="video-fallback"><a href="https://www.youtube.com/watch?v=HhCtMgyuWvw">Open trailer on YouTube</a></p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
+      <div class="footer-brand">
         <strong>Thomas Brown</strong>
         <span>She Taught Me To Laugh Again</span>
       </div>
